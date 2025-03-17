@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin-bottom: 0 !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.maindiv{
+    width: 100%;
+}
+
+.navbardiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    box-shadow: 2px 2px 10px 1px rgba(190, 189, 189, 0.71);
+    background-color: white;
+}
+
+.nav {
+}
+
+.ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    border-top: 4px solid #5E9400;
+}
+
+.navbars-top {
+    display: flex;
+    padding-block: 1%;
+    justify-content: center;
+    gap: 2%;
+    /* margin-left: 13%; */
+}
+
+.navbars-bottom {
+    display: flex;
+    padding-block: 1%;
+    justify-content: center;
+    /* margin-left: 16%; */
+    margin-top: -1%;
+}
+
+.my-compass {
+    background-color: #EEEEEE;
+    border: transparent;
+    border-radius: 7px;
+    padding-inline: 90%;
+    
+}
+
+.login-sgnup {
+    background-color: black;
+    color: white;
+    border: transparent;
+    border-radius: 7px;
+    padding-inline: 5%;
+    max-width: max-content;
+}
+
+.form-control {
+    height: 2.2rem;
+    width: 40rem !important;
+    max-width: 100%;
+    margin-top: 0.5%;
+    /* Ensures responsiveness */
+}
+
+.dropdown-menu {
+    background-color: transparent !important;
+    border: none;
+    box-shadow: none;
+}
+
+.fa-percent,
+.fa-basket-shopping {
+    font-size: 1rem;
+    /* Use rem for scalability */
+}
+
+.fit-data {
+    display: flex;
+    flex-direction: row;
+    width: 200%;
+    background-color: transparent;
+}
+
+.access-links {
+    font-size: 95%;
+}
+
+.btn-outline-none {
+    font-size: 75%;
+    background-color: #EEEEEE;
+    border-radius: 18px;
+    margin-top: -0.1% !important;
+}
+
+.EM-F {
+    font-weight: bolder;
+    background-color: #E8E8E8;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 90%;
+    width: 13%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NeuPass {
+    background-color: #1B0F2E;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    height: 60px;
+}
+
+.min-style {
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.section1__imagesdiv img {
+    width: 13%;
+}
+
+.icon-container {
+    max-width: 40px;
+    max-height: 30px;
+    background-color: #fde9e9;
+    padding: 2%;
+    padding-inline: 5%;
+    /* Light pink */
+}
+
+.icon-background {
+    width: 130%;
+    height: 100%;
+    padding: 25%;
+    background-color: #d92525;
+    /* Red circle */
+}
+
+.icon-background i{
+    font-size: 14px !important;
+
+}
+
+.icon-background i {
+    color: #ffffff;
+    /* White icon */
+    font-size: 18px;
+}
+
+
+
+#profilebtn{
+    display: flex;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.1);
+    width: 40px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    text-align: left;
+ }
+
+ #profilebtn i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
+    font-size: 15px;
+ }
+
+ .logged-inbtn{
+    position: relative;
+ }
+
+ .profilesection{
+    width: 250px;
+    height: fit-content;
+    position: absolute; 
+    top: 100%;
+    right: 50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: none;
+    gap: 0;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+ }
+
+ .profilesection div{
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+ }
+
+ .profilesection div:hover{
+    background-color: rgba(255,255,255,0.2);
+    transition: background-color 0.1s ease;
+    font-weight: bold;
+ }
+
+ 
+
+
+/* =============================Navbar ending=========================== */
+
+
+/* =============================Ordersdiv===============================*/
+
+.ordersdiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.headingdiv {
+    width: 80%;
+    margin-top: 2%;
+    /* align-self: flex-start; */
+}
+
+.ordersdivbody{
+    width: 80%;
+    height: 400px;  
+    /* background-color: red; */
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.order_item{
+    width: 100%;
+    background-color: white;
+    height: 400px;
+    width: 250px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2%;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
+.orderitem__imgdiv img{
+    width: 100%;
+    height: auto;
+}
+
+.Noordersdiv{
+    margin-top: 2%;
+    width: 100%;
+    text-align: center;
+    color: #CC0000;
+}

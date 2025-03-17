@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Grocery Shopping and Online Supermarket in India</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../CSS/styles.css">
+
+    <link rel="stylesheet" href="../CSS/login.css">
+
+    <link rel="shortcut icon" href="../images/section1/BigBasket-Fav.png" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/111755d819.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="maindiv">
+<!-- ================================Navbar================================ -->
+
+<div>
+    <div class="nav bg-light d-flex flex-column align-items-center">
+        <div class="navbar">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                <div class="container navbars-top">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="index.html">
+                        <img src="../images/section1/BigBasket-Logo.png" alt="" width="90" height="35">
+                    </a>
+
+                    <!-- Search Bar -->
+                    <form class="d-none d-md-flex flex-grow-1 mx-3">
+                        <input class="form-control search-bar" type="search" placeholder="🔍 Search for Products..."
+                            aria-label="Search">
+                    </form>
+
+                    <!-- Buttons -->
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn my-compass border">
+                            <i class="fa-solid fa-compass"></i> Select Location
+                        </button>
+                        <button class="btn btn-dark text-white login-sign-up" id="loginbtn">Login/Sign <br> Up
+                        </button>
+
+                        <div class="logged-inbtn" id="profilebtn">
+                            <i class="fa-solid fa-user"></i>
+                            <div class="profilesection" id="profilesection">
+                                <div class="myaccount">My Account</div>
+                                <div class="mybasket" >My Basket</div>
+                                <div class="myorders" id="orderbtn">My Orders</div>
+                                <div class="mysmartbasket">My Smart Basket</div>
+                                <div class="mywallet">My Wallet</div>
+                                <div class="contactus">Contact Us</div>
+                                <div class="logoutbtn" id="logoutbtn">Logout</div>
+                            </div>
+                        </div>
+
+                        <!-- <span id="emaildisplaydiv"></span> -->
+
+                        <div class="logoutdiv">
+                            
+                        </div>
+                        <div class="icon-container d-flex justify-content-center align-items-center rounded-3" id="cartsdiv">
+                            <div class="icon-background d-flex justify-content-center align-items-center rounded-circle">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="navbar container bg-transparent">
+            <nav class="navbar container navbar-expand-lg bg-transparent">
+                <div class="container navbars-bottom bg-transparent">
+                    <div class="dropdown">
+                        <button class="btn btn-success me-5 dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Shop by Category
+                        </button>
+                        <div class="dropdown-menu bg-transparent">
+                            <div class="fit-data d-flex justify-content-center">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Electronics</li>
+                                    <li class="list-group-item">Fashion</li>
+                                    <li class="list-group-item">Apparel</li>
+                                    <li class="list-group-item">Fruits & Vegetables</li>
+                                    <li class="list-group-item">Foodgrains, Oil & Masala</li>
+                                    <li class="list-group-item">Bakery, Cakes & Dairy</li>
+                                    <li class="list-group-item">Beverages</li>
+                                    <li class="list-group-item">Snacks & Branded Foods</li>
+                                    <li class="list-group-item">Beauty & Hygiene</li>
+                                    <li class="list-group-item">Cleaning & Household</li>
+                                    <li class="list-group-item">Kitchen, Garden & Pets</li>
+                                    <li class="list-group-item">Eggs, Meat & Fish</li>
+                                    <li class="list-group-item">Gourmet & World Food</li>
+                                    <li class="list-group-item">Baby Care</li>
+                                    <li class="list-group-item">Paan Corner</li>
+                                </ul>
+                                <ul class="list-group">
+                                    <li class="list-group-item">Audio devices</li>
+                                    <li class="list-group-item">Beauty & Grooming</li>
+                                    <li class="list-group-item">Cameras & Accessories</li>
+                                    <li class="list-group-item">Electrical Accessories</li>
+                                    <li class="list-group-item">Home Appliances</li>
+                                    <li class="list-group-item">Kitchen Appliances</li>
+                                    <li class="list-group-item">Phone & Laptop Accessory</li>
+                                    <li class="list-group-item">Phone, Laptop & Tablets</li>
+                                    <li class="list-group-item">Smart Wearables</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ul">
+                            <li class="nav-item">
+                                <a class="nav-link me-4 text-dark" href="#">Exotic Fruits & Vegetables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4 text-dark" href="#">Tea</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4 text-dark" href="#">Ghee</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4 text-dark" href="#">Nandini</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4 text-dark" href="#">Fresh Vegetables >></a>
+                            </li>
+                            <li class="nav-item">
+                                <img src="../images/Navbar images/7.jpeg" alt="">
+                            </li>
+                            <li class="nav-item ms-2">
+                                <div class="d-flex align-items-center gap-3">
+                                    <!-- <button class="btn gap-2 btn-outline-none d-flex">
+                                        <i class="fa-solid mt-2 fa-percent"
+                                        style="color: #5E9400;"></i>
+                                        <div class="mt-1">Offers</div>
+                                    </button> -->
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container-sm text-center mt-3">
+        <img src="../images/section1/Ariel-Banner.png" class="img-fluid" alt="Ariel Banner" width="87%">
+    </div>
+
+    <div class="container-sm d-flex flex-wrap justify-content-center mt-3 gap-4 section1__imagesdiv">
+        <img src="../images/Navbar images/1.jpeg" alt="">
+        <img src="../images/section1/neupass.png" class="NeuPass" width="15%" height="auto">
+        <img src="../images/Navbar images/3.jpeg" alt="">
+        <img src="../images/Navbar images/4.jpeg" alt="">
+        <img src="../images/Navbar images/5.jpeg" alt="">
+        <img src="../images/Navbar images/6.jpeg" alt="">
+    </div>
+
+</div>
+
+
+<!-- ==========================================Section2==================================== -->
+
+<section class="section2">
+    <div class="section2__body">
+        <div class="section2__headingdiv">
+            <div class="section2__heading"><h5>My Smart Basket</h5></div>
+            <div class="section2__links">
+                <a href="#" class="section2__link">View all</a>
+                <div class="section2__btndiv">
+                    <button class="sec2__btn" id="sec2__left__arrow__btn"><i class="fa-solid fa-angle-left"></i></button>
+                    <button class="sec2__btn" id="sec2__right__arrow__btn"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section2__cardsdiv">
+            <div class="section2__card">
+                <div class="section2__cardtop">
+                    <div class="imgdiv">
+                        <div class="section2__offerdiv"><p>42% OFF</p></div>
+                        <img src="../images/ection2/1.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="section2card__body">
+                    <div class="sec2card__namediv">
+                        <p>fresho!</p>
+                        <h6>Capsicum - Green (Loose)</h6>
+                    </div>
+                    <div class="sec2card__inputdiv">
+                        <div class="sec2card__selectdiv">
+                            <p>10kg</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="sec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>36 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>61.64</strike></div>
+                    </div>
+                    <div class="sec2card__cartdiv">
+                        <div class="sec2card__savediv">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="sec2card__addtocart">
+                            <button class="section2__card__btn" onclick="addToCart(1,'../images/ection2/1.jpeg','Capsicum - Green (Loose)','36')">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="section2__card">
+                <div class="section2__cardtop">
+                    <div class="imgdiv">
+                        <div class="section2__offerdiv"><p>42% OFF</p></div>
+                        <img src="../images/ection2/2.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="section2card__body">
+                    <div class="sec2card__namediv">
+                        <p>fresho!</p>
+                        <h6>Carrot - orange(Loose)</h6>
+                    </div>
+                    <div class="sec2card__inputdiv">
+                        <div class="sec2card__selectdiv">
+                            <p>1kg</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="sec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>42 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>67.12</strike></div>
+                    </div>
+                    <div class="sec2card__cartdiv">
+                        <div class="sec2card__savediv">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="sec2card__addtocart">
+                            <button class="section2__card__btn" onclick="addToCart(2,'../images/ection2/2.jpeg','Carrot - orange(Loose)','42')">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section2__card">
+                <div class="section2__cardtop">
+                    <div class="imgdiv">
+                        <div class="section2__offerdiv"><p>42% OFF</p></div>
+                        <img src="../images/ection2/3.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="section2card__body">
+                    <div class="sec2card__namediv">
+                        <p>fresho!</p>
+                        <h6>Cauliflower</h6>
+                    </div>
+                    <div class="sec2card__inputdiv">
+                        <div class="sec2card__selectdiv">
+                            <p>1pc - (approx. 400g to 600g)</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="sec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>18 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>28.77</strike></div>
+                    </div>
+                    <div class="sec2card__cartdiv">
+                        <div class="sec2card__savediv">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="sec2card__addtocart">
+                            <button class="section2__card__btn" onclick="addToCart(3,'../images/ection2/3.jpeg','Cauliflower','18')">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section2__card">
+                <div class="section2__cardtop">
+                    <div class="imgdiv">
+                        <div class="section2__offerdiv"><p>42% OFF</p></div>
+                        <img src="../images/ection2/4.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="section2card__body">
+                    <div class="sec2card__namediv">
+                        <p>fresho!</p>
+                        <h6>Coriander Leaves</h6>
+                    </div>
+                    <div class="sec2card__inputdiv">
+                        <div class="sec2card__selectdiv">
+                            <p>1Kg</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="sec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>110 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>128.36</strike></div>
+                    </div>
+                    <div class="sec2card__cartdiv">
+                        <div class="sec2card__savediv">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="sec2card__addtocart">
+                            <button class="section2__card__btn" onclick="addToCart(4,'../images/ection2/4.jpeg','Coriander Leaves','110')">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section2__card">
+                <div class="section2__cardtop">
+                    <div class="imgdiv">
+                        <!-- <div class="section2__offerdiv"><p>42% OFF</p></div> -->
+                        <img src="../images/ection2/5.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="section2card__body">
+                    <div class="sec2card__namediv">
+                        <p>fresho!</p>
+                        <h6>Cucumber</h6>
+                    </div>
+                    <div class="sec2card__inputdiv">
+                        <div class="sec2card__selectdiv">
+                            <p>10kg</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="sec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>490 &nbsp;</div>
+                    </div>
+                    <div class="sec2card__cartdiv">
+                        <div class="sec2card__savediv">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="sec2card__addtocart">
+                            <button class="section2__card__btn" onclick="addToCart(5,'../images/ection2/5.jpeg','Cucumber','490')">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section2__card">
+                <div class="section2__cardtop">
+                    <div class="imgdiv">
+                        <div class="section2__offerdiv"><p>42% OFF</p></div>
+                        <img src="../images/ection2/6.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="section2card__body">
+                    <div class="sec2card__namediv">
+                        <p>fresho!</p>
+                        <h6>Ladies' Fingers (Loose)</h6>
+                    </div>
+                    <div class="sec2card__inputdiv">
+                        <div class="sec2card__selectdiv">
+                            <p>1kg</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="sec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>46 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>61.64</strike></div>
+                    </div>
+                    <div class="sec2card__cartdiv">
+                        <div class="sec2card__savediv">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="sec2card__addtocart">
+                            <button class="section2__card__btn" onclick="addToCart(6,'../images/ection2/6.jpeg','Ladies Fingers (Loose)','36')">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section2__card">
+                <div class="section2__cardtop">
+                    <div class="imgdiv">
+                        <div class="section2__offerdiv"><p>42% OFF</p></div>
+                        <img src="../images/ection2/7.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="section2card__body">
+                    <div class="sec2card__namediv">
+                        <p>fresho!</p>
+                        <h6>Onion</h6>
+                    </div>
+                    <div class="sec2card__inputdiv">
+                        <div class="sec2card__selectdiv">
+                            <p>5 x 1 kg- Multipack</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="sec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>199.5 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>321.92</strike></div>
+                    </div>
+                    <div class="sec2card__cartdiv">
+                        <div class="sec2card__savediv">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="sec2card__addtocart">
+                            <button class="section2__card__btn" onclick="addToCart(7,'../images/ection2/7.jpeg','Onion','199.5')">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section2__card">
+                <div class="section2__cardtop">
+                    <div class="imgdiv">
+                        <div class="section2__offerdiv"><p>42% OFF</p></div>
+                        <img src="../images/ection2/8.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="section2card__body">
+                    <div class="sec2card__namediv">
+                        <p>fresho!</p>
+                        <h6>Potato</h6>
+                    </div>
+                    <div class="sec2card__inputdiv">
+                        <div class="sec2card__selectdiv">
+                            <p>5kg</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="sec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>75 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>132.22</strike></div>
+                    </div>
+                    <div class="sec2card__cartdiv">
+                        <div class="sec2card__savediv">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="sec2card__addtocart">
+                            <button class="section2__card__btn" onclick="addToCart(8,'../images/ection2/8.jpeg','Capsicum - Green (Loose)','36')">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================================Section 3============================== -->
+
+<section class="section3">
+    <div class="section3__body">
+        <div class="section3__headingdiv">
+            <div class="section3__heading"><h5>Best Sellers</h5></div>
+            <div class="section3__links">
+                <a href="#" class="section3__link">View all</a>
+                <div class="section3__btndiv">
+                    <button class="sec3__btn" id="sec3__left__arrow__btn"><i class="fa-solid fa-angle-left"></i></button>
+                    <button class="sec3__btn" id="sec3__right__arrow__btn"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section3__cardsdiv">
+            <div class="section3__card">
+                <div class="section3__cardtop">
+                    <div class="imgdiv">
+                        <div class="section3__offerdiv"><p>48% OFF</p></div>
+                        <img src="../images/section3/1.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="section3card__body">
+                    <div class="sec3card__namediv">
+                        <p>Littles</p>
+                        <h6>Baby Wipes</h6>
+                    </div>
+                    <div class="sec3card__inputdiv">
+                        <div class="sec3card__selectdiv">
+                            <p>80pcs</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="sec3__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>99 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>190</strike></div>
+                    </div>
+                    <div class="sec3card__cartdiv">
+                        <div class="sec3card__savediv">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="sec3card__addtocart">
+                            <button class="section3__card__btn" onclick="addToCart(9,'../images/section3/1.jpeg','Baby Wipes','99')">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="section3__card">
+                <div class="section3__cardtop">
+                    <div class="imgdiv">
+                        <div class="section3__offerdiv"><p>45% OFF</p></div>
+                        <img src="../images/section3/2.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="section3card__body">
+                    <div class="sec3card__namediv">
+                        <p>Bigbasket</p>
+                        <h6>Sea Breeze Baby Wipes</h6>
+                    </div>
+                    <div class="sec3card__inputdiv">
+                        <div class="sec3card__selectdiv">
+                            <p>90pcs</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="sec3__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>109 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>199</strike></div>
+                    </div>
+                    <div class="sec3card__cartdiv">
+                        <div class="sec3card__savediv">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="sec3card__addtocart">
+                            <button class="section3__card__btn" onclick="addToCart(10,'../images/section3/2.jpeg','Sea Breeze Baby Wipes','109')">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section3__card">
+                <div class="section3__cardtop">
+                    <div class="imgdiv">
+                        <div class="section3__offerdiv"><p>45% OFF</p></div>
+                        <img src="../images/section3/3.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="section3card__body">
+                    <div class="sec3card__namediv">
+                        <p>Bigbasket</p>
+                        <h6>Cherry Blossom Baby Wipes</h6>
+                    </div>
+                    <div class="sec3card__inputdiv">
+                        <div class="sec3card__selectdiv">
+                            <p>80pcs</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="sec3__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>18 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>28.77</strike></div>
+                    </div>
+                    <div class="sec3card__cartdiv">
+                        <div class="sec3card__savediv">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="sec3card__addtocart">
+                            <button class="section3__card__btn" onclick="addToCart(11,'../images/section3/3.jpeg','Cherry Blossom Baby Wipes','18')">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section3__card">
+                <div class="section3__cardtop">
+                    <div class="imgdiv">
+                        <div class="section3__offerdiv"><p>45% OFF</p></div>
+                        <img src="../images/section3/4.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="section3card__body">
+                    <div class="sec3card__namediv">
+                        <p>Bigbasket</p>
+                        <h6>Fresh Baby Wipes</h6>
+                    </div>
+                    <div class="sec3card__inputdiv">
+                        <div class="sec3card__selectdiv">
+                            <p>80pcs</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="sec3__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>109 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>199</strike></div>
+                    </div>
+                    <div class="sec3card__cartdiv">
+                        <div class="sec3card__savediv">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="sec3card__addtocart">
+                            <button class="section3__card__btn" onclick="addToCart(12,'../images/section3/4.jpeg','Fresh Baby Wipes','109')">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section3__card">
+                <div class="section3__cardtop">
+                    <div class="imgdiv">
+                        <div class="section2__offerdiv"><p>25% OFF</p></div>
+                        <img src="../images/section3/5.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="section3card__body">
+                    <div class="sec3card__namediv">
+                        <p>Johnson's baby</p>
+                        <h6>Baby Wipes</h6>
+                    </div>
+                    <div class="sec3card__inputdiv">
+                        <div class="sec3card__selectdiv">
+                            <p>72pcs</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="sec3__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>210 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>280</strike></div>
+                    </div>
+                    <div class="sec3card__cartdiv">
+                        <div class="sec3card__savediv">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="sec3card__addtocart">
+                            <button class="section3__card__btn" onclick="addToCart(13,'../images/section3/5.jpeg','Baby Wipes','210')">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section3__card">
+                <div class="section3__cardtop">
+                    <div class="imgdiv">
+                        <div class="section3__offerdiv"><p>30% OFF</p></div>
+                        <img src="../images/section3/6.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="section3card__body">
+                    <div class="sec3card__namediv">
+                        <p>Pampers</p>
+                        <h6>Baby Wipes</h6>
+                    </div>
+                    <div class="sec3card__inputdiv">
+                        <div class="sec3card__selectdiv">
+                            <p>72 pcs - (Pack of 2)</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="sec3__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>418.6 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>598</strike></div>
+                    </div>
+                    <div class="sec3card__cartdiv">
+                        <div class="sec3card__savediv">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="sec3card__addtocart">
+                            <button class="section3__card__btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================================Section 4=============================== -->
+
+
+<section class="section4">
+    <div class="section4__body">
+        <div class="container">
+            <div class="row m-2" >
+                <h4 class="ps-4">Top Offers</h1>
+                <div class="col-md-3 col-lg-3 col-sm-3" >
+                    <div class="card border-0" > 
+                        <div class="card-body">
+                            <img class="img-fluid image" style="border-radius: 15px;" src="../IMAGES/hp_dow-topoffersStorefront_m_480_250723_01.webp" alt="alt">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-3">
+                    <div class="card border-0" > 
+                       <div class="card-body">
+                        <img style="border-radius: 15px;" class="img-fluid image" src="../IMAGES/hp_big-packs-topoffersStorefront_m_480_250723_02.webp" alt="alt">
+                       </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-3">
+                    <div class="card border-0" > 
+                        <div class="card-body ">
+                            <img style="border-radius: 15px;" class="img-fluid image" src="../IMAGES/hp_combos-topoffersStorefront_m_480_250723_03.webp" alt="alt">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3    col-sm-3">
+                    <div class="card border-0" > 
+                       <div class="card-body">
+                        <img style="border-radius: 15px;" class="img-fluid image" src="../IMAGES/hp_30-corner-topoffersStorefront_m_480_250723_04.webp" alt="alt">
+                       </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="row m-2" >
+                <h4 class="ps-4">Furits and Vegetables</h1>
+                <div class="col-md-3 col-lg-3 col-sm-3" >
+                    <div class="card border-0" > 
+                        <div class="card-body">
+                            <img class="img-fluid image" style="border-radius: 15px;" src="../IMAGES/hp_f&v_m_fresh-vegetables_480_250923.webp" alt="alt">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-3">
+                    <div class="card border-0" > 
+                       <div class="card-body">
+                        <img style="border-radius: 15px;" class="img-fluid image" src="../IMAGES/hp_f&v_m_fresh-fruits_480_250923.webp" alt="alt">
+                       </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-3">
+                    <div class="card border-0" > 
+                        <div class="card-body ">
+                            <img style="border-radius: 15px;" class="img-fluid image" src="../IMAGES/hp_f&v_m_cuts-&-exotics_480_250923.webp" alt="alt">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3    col-sm-3">
+                    <div class="card border-0" > 
+                       <div class="card-body">
+                        <img style="border-radius: 15px;" class="img-fluid image" src="../IMAGES/hp_f&v_m_herbs-&-seasoning_480_250923.webp" alt="alt">
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================================Section 5============================== -->
+
+
+<section class="section5">
+    <div class="section5__body">
+        <div class="container">
+            <div class="row m-2" >
+                <h4 class="ps-4">Snacks Store</h1>
+                <div class="col-md-3 col-lg-3 col-sm-3" >
+                    <div class="card border-0" > 
+                        <div class="card-body">
+                            <img class="img-fluid image" style="border-radius: 15px;" src="../IMAGES/hp_sbf_m_biscuits-&-namkeens_480_250923.webp" alt="alt">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-3">
+                    <div class="card border-0" > 
+                       <div class="card-body">
+                        <img style="border-radius: 15px;" class="img-fluid image" src="../IMAGES/hp_sbf_m_breakfast-cereals_480_250923.webp" alt="alt">
+                       </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-3">
+                    <div class="card border-0" > 
+                        <div class="card-body ">
+                            <img style="border-radius: 15px;" class="img-fluid image" src="../IMAGES/hp_sbf_m_pasta-sauces-&-more_480_270723.webp" alt="alt">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3    col-sm-3">
+                    <div class="card border-0" > 
+                       <div class="card-body">
+                        <img style="border-radius: 15px;" class="img-fluid image" src="../IMAGES/hp_sbf_m_sweet-cravings_480_250923.webp" alt="alt">
+                       </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <div class="row m-2" >
+                <h4 class="ps-4">Cleaning and Household</h1>
+                <div class="col-md-3 col-lg-3 col-sm-3" >
+                    <div class="card border-0" > 
+                        <div class="card-body">
+                            <img class="img-fluid image" style="border-radius: 15px;" src="../IMAGES/hp_c&h_m_cleaners_480_250723.webp" alt="alt">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-3">
+                    <div class="card border-0" > 
+                       <div class="card-body">
+                        <img style="border-radius: 15px;" class="img-fluid image" src="../IMAGES/hp_c&h_m_detergents-&-fabric-care_480_250723.webp" alt="alt">
+                       </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-3">
+                    <div class="card border-0" > 
+                        <div class="card-body ">
+                            <img style="border-radius: 15px;" class="img-fluid image" src="../IMAGES/hp_c&h_m_paper-disposables-&-garbage-bags_480_250723.webp" alt="alt">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3    col-sm-3">
+                    <div class="card border-0" > 
+                       <div class="card-body">
+                        <img style="border-radius: 15px;" class="img-fluid image" src="../IMAGES/hp_c&h_m_freshner_480_250723.webp" alt="alt">
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ====================================Section6================================ -->
+
+<section class="section6">
+    <div class="section6__body">
+        <div class="container">
+            <div class="row">
+                <h5 class="p-3">Beauty and Hygiene</h5>
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <div class="card sec5__card">
+                            <img src="../images/hp_b&h_m_-makeup_480_250923.webp" class="card-img-top img-fluid " alt="...">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <div class="card sec5__card">
+                            <img src="../images/hp_b&h_m_moisturiser_480_250923.webp" class="card-img-top img-fluid " alt="...">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <div class="card sec5__card"  >
+                            <img src="../images/hp_b&h_m_perfumes_480_250923.webp" class="card-img-top img-fluid " alt="...">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <div class="card sec5__card">
+                            <img src="../images/hp_b&h_m_mens-shaving_480_250923.webp" class="card-img-top img-fluid " alt="...">
+                        </div>
+                    </div>
+                    <div class="col-lg-2  col-md-2 col-sm-2">
+                        <div class="card sec5__card">
+                            <img src="../images/hp_b&h_m_minimum-30-off_480_250923.webp" class="card-img-top img-fluid " alt="...">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <div class="card sec5__card"  >
+                            <img src="../images/hp_b&h_m_big-pack-bigger-saving bf_480_250923.webp" class="card-img-top img-fluid " alt="...">
+                        </div>
+                    </div>
+               </div>
+        </div>
+        <div class="row p-2">
+            <h5 class="p-3">Home and Kitchen</h5>
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <div  class="card sec5__card">
+                        <img src="../images/hp_GMunder-99_m_250723_01.webp" class="card-img-top img-fluid" alt="...">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <div class="card sec5__card">
+                        <img src="../images/hp_GM100-199_m_250723_02.webp" class="card-img-top img-fluid" alt="...">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <div  class="card sec5__card">
+                        <img src="../images/hp_GMStorefront-pressure-cooker_m_250723_03.webp" class="card-img-top img-fluid" alt="...">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <div class="card sec5__card">
+                        <img src="../images/hp_GMStorefront-stationery-store_m_250723_04.webp" class="card-img-top img-fluid" alt="...">
+                    </div>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-2">
+                    <div class="card sec5__card">
+                        <img src="../images/hp_GM-storage-container_m_250723_05.webp" class="card-img-top img-fluid" alt="...">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <div class="card sec5__card">
+                        <img src="../images/hp_GM-cleaning-needs_m_250723_06.webp" class="card-img-top img-fluid" alt="...">
+                    </div>
+                </div>
+           </div>
+        </div>
+</section>
+
+
+<!-- =====================================Section7=============================== -->
+
+<section class="section7">
+    <div class="carousal-1">
+        <div id="carouselExampleIndicators" class="carousel slide slides" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button"   data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../IMAGES/hp_bcd_m_bcd_250923_400.webp"class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../IMAGES/hp_m_health_suppliment_250923_400.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../IMAGES/hp_m_petstore_250923_400.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../IMAGES/hp_m_babycare_250923_400.webp" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev prev__div" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon previous" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next next__div" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon previous" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+</section>
+
+<!-- ==============================Section8============================ -->
+
+<section class="section8">
+    <div class="content">
+        <h3 class="heading-3">bigbasket - online grocery store</h3>
+        <p>Did you ever imagine that the freshest of fruits and vegetables,
+             top-quality pulses and food grains, dairy products, and hundreds
+              of branded items could be handpicked and delivered to your home, 
+              all at the click of a button? In today's fast-paced world, bigbasket.com,
+               India's pioneering online grocery store, continues to bring a staggering 
+               array of over 40,000 products from more than 1,000 brands to the doorsteps
+                of over 10 million satisfied customers. From essential household cleaning
+                 products to the latest beauty and makeup trends, bigbasket remains your
+                  one-stop shop for daily needs.</p> <br>
+         <p>   In these times, we've eliminated the stress associated with shopping for daily
+             essentials. You can now effortlessly order all your household products and groceries 
+             online. Plus, the added convenience of finding all your requirements at a single source, 
+             coupled with substantial savings, demonstrates that bigbasket, India's largest online 
+             supermarket, has transformed the way we shop for groceries. Online grocery shopping has 
+             become second nature. And when it comes to freshness, whether it's fruits and vegetables
+              or dairy and meat, we've got you covered! Easily obtain fresh eggs, meat, fish, and more 
+              with just a few clicks. </p> <br>
+        <p>    We now serve 300+ cities and towns across India and ensure swift delivery times,
+             guaranteeing that all your groceries, snacks and branded foods reach you on time. </p> <br>
+            Slotted Delivery: Choose the most convenient delivery slot to receive 
+           <p> your groceries, ranging from early morning delivery for early birds to l
+            ate-night delivery for those on the night shift. bigbasket caters to every schedule.</p> <br>
+           <p> Instant delivery from bbnow: In response to the ever-increasing demand fo
+            r convenience, bbnow by bigbasket offers lightning-fast grocery delivery, 
+            ensuring that your essentials are at your doorstep within 15-30 minutes.
+             Our quick delivery service has revolutionized the way you shop for groceries.
+              Choose from 5000+ grocery essentials. bbnow is available only in select cities. </p> <br>
+           <p> Whether it's a last-minute dinner party or you simply need something urgently,
+             we've got you covered. This service exemplifies our commitment to providing you 
+             with not just the widest range of products but also the fastest and most efficient 
+             shopping experience, making bigbasket.com the go-to destination for all your immediate 
+             grocery needs.
+            </p>
+      </div>
+</section>
+
+<div class="Loginmodaldiv" id="Loginmodaldiv">
+    <div class="Logindiv">
+        <div class="whybigbasketdiv">
+            <div class="heading">
+                <p>Why choose Bigbasket?</p>
+            </div>
+            <div class="icondiv">
+                <div class="icondiv1">
+                    <span class="icon1"><i class="fa-solid fa-bottle-droplet"></i><p>Quality</p></span>
+                    <span class="icon2"><i class="fa-solid fa-clock"></i><p>On Time</p></span>
+                </div>
+                <div class="icondiv2">
+                    <span class="icon3"><i class="fa-solid fa-truck-moving"></i><p>Return Policy</p></span>
+                    <span class="icon4"><i class="fa-solid fa-basket-shopping"></i><p>Free Delivery</p></span>
+                </div>  
+            </div>
+
+            <div class="seperationdiv"></div>
+
+            <div class="findusdiv">
+                <p>Find Us on</p>
+                <div class="playstorediv">
+                    <img src="../images/playstore.png" alt="">
+                </div>
+
+                <div class="applediv">
+                    <img src="../images/apple.png" alt="">
+                </div>
+            </div>
+        </div>
+        <form class="formdiv" id="form">
+            <div class="closebtndiv" id="closebtndiv">x</div>
+            <div class="formheadingdiv">
+                <h3 id="loginsignupdiv">Login/ Sign up</h3>
+                <p id="headingemaildiv">Using OTP</p>
+                <div class="formseperationdiv"></div>
+            </div>
+
+            <div class="inputdiv">
+                <input type="email" class="inputfield" id="Email" placeholder="Enter Email Id">
+            </div>
+
+            <div class="OTPdiv" id="OTPdiv">
+                <input type="text" name="" id="otp1" maxlength="1" oninput="movetonext(this,'otp2')">
+                <input type="text" name="" id="otp2" maxlength="1" oninput="movetonext(this,'otp3')">
+                <input type="text" name="" id="otp3" maxlength="1" oninput="movetonext(this,'otp4')">
+                <input type="text" name="" id="otp4" maxlength="1" oninput="movetonext(this,'otp5')">
+                <input type="text" name="" id="otp5" maxlength="1" oninput="movetonext(this,'otp6')">
+                <input type="text" name="" id="otp6" maxlength="1" oninput="movetonext(this,'')">
+            </div>
+
+            <div class="submitbtndiv">
+                <input type="submit" value="Continue" class="submitbtn" id="submitbtn">
+            </div>
+
+            <div class="logintermsconditionsdiv" id="logintermsconditionsdiv">
+                <p>By continuing, I accept TCP - bigbasket's Terms and Conditions & Privacy Policy.This site is protected by reCAPTCHA and the Google - Privacy Policy and & Terms of Service <br> apply.</p>
+            </div>
+
+            <div class="resenddiv" id="resenddiv">
+                <p id="resendmail">Resend OTP</p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- =============================Footer============================= -->
+
+<footer class="footer">
+    <div class="footdiv-1">
+      <div class="subfoot-1">
+        <h3 class="footh-3">big basket</h3>
+        <p class="footp">About us</p>
+        <p class="footp">Become a bigbasket Rider</p>
+        <p class="footp">In news</p>
+        <p class="footp">Green big basket</p>
+        <p class="footp">Privacy policy</p>
+        <p class="footp">Terms and Conditions</p>
+        <p class="footp">Careers at big basket</p>
+        <p class="footp">bb instant</p>
+        <p class="footp">bb Daily</p>
+        <p class="footp">bb Blog</p>
+        <p class="footp">bbnow</p>
+      </div>
+      <div class="subfoot-1">
+       
+          <h3 class="footh-3">Help</h3>
+          <p class="footp">FAQs</p>
+          <p class="footp">Contact us</p>
+          <p class="footp">bb Wallet FAQs</p>
+          <p class="footp">bb Wallet Q&Cs</p>
+          <p class="footp">Vendor Connect</p>
+         
+         </div>
+      <div class="subfoot-11">
+        <div class="imgdiv">
+        <img src="../images/footerbbicon.png" class="img-fluid" alt="" width="180px" height="90px">
+     
+        </div>
+        <div class="buttons">
+          <button class="border d-flex justify-content-center align-items-center" style="padding-inline: 1%;">
+            <div class="footerbtn__icondiv"><img src="../images/playstore.png" alt=""></div>
+            <div class="footerbtn__textdiv">
+                <p>GET IT ON</p>
+                <h6>Google Play</h6>
+            </div>
+          </button>
+          <button class="border d-flex justify-content-center align-items-center">
+            <div class="footerbtn__icondiv"><img src="../images/apple.png" alt="" style="width: 35px; height: 35px;"></div>
+            <div class="footerbtn__textdiv">
+                <p>GET IT ON</p>
+                <h6>Google Play</h6>
+            </div>
+        </button>
+        </div>
+        <div class="icons">
+          <i class="fa-brands fa-facebook face"></i>
+          <i class="fa-brands fa-youtube you face2"></i>
+          <i class="fa-brands fa-instagram face2"></i>
+          <i class="fa-brands fa-twitter face2"></i>
+        </div>
+       </div>
+    </div>
+    <div class="footdiv-2">
+      <div class="footdiv-2head">
+         <center>  <h6 class="foot2head">Cities we serve</h6></center>
+      </div>
+      <div class="footdiv-2cont">
+        <p>Abohar | Abu Road | Achampet | Achrol | Adampur | Addanki | Addateegala | Adilabad | Adimali | Adoni | Adoor | Afzalpur | Agali | AGARTALA | Agra | </p>
+      </div>
+    </div>
+    <div class="footdiv-3">
+        <div class="subfoot-3">
+          <h3 class="footh-3">Popular Categories</h3>
+          <p class="footp">sunflower oils</p>
+          <p class="footp">Milk</p>
+          <p class="footp">Organic F&V</p>
+          <p class="footp">Floor cleaners</p>
+          <p class="footp">Frozen veg food</p>
+        </div>
+        <div class="subfoot-4">
+          <p class="footp">wheet atta</p>
+          <p class="footp">Health drinks</p>
+          <p class="footp">Namkeen</p>
+          <p class="footp">Other juices</p>
+          <p class="footp">Diapers & wipes</p>
+        </div>
+        <div class="subfoot-4">
+          <p class="footp">Ghee</p>
+          <p class="footp">Flakes</p>
+          <p class="footp">Eggs</p>
+          <p class="footp">Leafy vegetables</p>
+        </div>
+        <div class="subfoot-3">
+          <h3 class="footh-3">Popular Brands</h3>
+          <p class="footp">Amul</p>
+          <p class="footp">Red bull</p>
+          <p class="footp">Yummaiz</p>
+          <p class="footp">Bratannia</p>
+          <p class="footp">Haldrams's</p>
+        </div>
+        <div class="subfoot-4">
+          <p class="footp">Nescafe</p>
+          <p class="footp">elite cake</p>
+          <p class="footp">yera</p>
+          <p class="footp">wow momo!</p>
+          <p class="footp">Ferrero</p>
+        </div>
+        <div class="subfoot-4">
+          <p class="footp">MTR</p>
+          <p class="footp">pediasure</p>
+          <p class="footp">Yakult</p>
+          <p class="footp">Fortune</p>
+          <p class="footp">Lay's</p>
+        </div>
+    </div>
+    <div class="showmore"><p >Show more +</p></div>
+</footer>
+
+<div class="finalfoot">
+    <div class="copy">
+    <p>Copyright © 2024-2026 Supermarket Grocery Supplies Pvt Ltd</p>
+    </div>
+</div>
+
+
+  
+</div>
+
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+    <script src="../JS/index.js"></script>
+
+    <!-- ==============================LOGIN JS====================== -->
+    <script>
+        let loginbtn = document.getElementById("loginbtn");
+let Loginmodaldiv = document.getElementById("Loginmodaldiv"); 
+let cartbtn = document.getElementById("cartsdiv");
+let profilebtn = document.getElementById("profilebtn");
+let profilesection = document.getElementById("profilesection");
+let logoutbtn = document.getElementById("logoutbtn");
+let emaildisplaydiv = document.getElementById("emaildisplaydiv");
+let emailfield = document.getElementById("Email");
+let OTPDIV = document.getElementById("OTPdiv");
+let formheadingdiv = document.getElementById("loginsignupdiv");
+let headingemaildiv = document.getElementById("headingemaildiv");
+let submitbtn = document.getElementById("submitbtn");
+let terms_conditionsdiv = document.getElementById("logintermsconditionsdiv");
+let resenddiv = document.getElementById("resenddiv");
+let form = document.getElementById('form');
+
+
+profilesection.style.display = "none";
+logoutbtn.style.display = "none";
+Loginmodaldiv.style.display = "none";
+
+
+let userdetails = JSON.parse(localStorage.getItem('loggeduserdetails')) || [];
+let currentuser = JSON.parse(localStorage.getItem('currentuser')) || null;
+let userloggedin = JSON.parse(localStorage.getItem('userloggedin')) || false;
+
+
+logoutbtn.addEventListener('click', () => {
+    alert("Logging out...");
+    localStorage.removeItem('currentuser');
+    localStorage.removeItem('userloggedin');
+    profilebtn.style.display = "none";
+    loginbtn.style.display = "flex";
+    logoutbtn.style.display = "none";
+    profilesection.style.display = "none";
+});
+
+
+loginbtn.addEventListener('click', () => {
+    Loginmodaldiv.style.display = Loginmodaldiv.style.display === "none" ? "flex" : "none";
+});
+
+
+function generateotp() {
+    return Math.floor(100000 + Math.random() * 900000).toString();
+}
+
+
+emailjs.init("U4Njn7Y5_7iUzg-95");
+
+
+function sendotp(email) {
+    const OTP = generateotp();
+    let templateparams = {
+        to_email: email,
+        code: OTP
+    };
+
+    emailjs.send("service_jw7pldj", "template_x2wifcp", templateparams)
+        .then(response => {
+            emailfield.style.display = "none";
+            OTPDIV.style.display = "flex";
+            formheadingdiv.innerHTML = "Verify Email";
+            headingemaildiv.innerHTML = email;
+            submitbtn.value = "Verify & Continue";
+            terms_conditionsdiv.style.display = "none";
+            resenddiv.style.display = "block";
+            localStorage.setItem('OTP', OTP);
+        })
+        .catch(error => {
+            console.error("Error sending OTP:", error);
+        });
+}
+
+
+let isverifying = false;
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const email = emailfield.value;
+
+    if (!isverifying) {
+        if (email === "") {
+            alert("Enter Email Address");
+        } else {
+            sendotp(email);
+            isverifying = true;
+        }
+    } else {
+        let enteredOTP = Array.from(document.querySelectorAll("[id^='otp']"))
+            .map(input => input.value)
+            .join('');
+        let storedOTP = localStorage.getItem('OTP');
+
+        if (enteredOTP === "") {
+            alert("Enter Valid OTP");
+        } else if (enteredOTP === storedOTP) {
+            alert("OTP Matched");
+            userdetails.push({ email: email });
+            localStorage.setItem('loggeduserdetails', JSON.stringify(userdetails));
+            localStorage.setItem('currentuser', JSON.stringify(email));
+            localStorage.setItem('userloggedin', true);
+            loginbtn.style.display = "none";
+            Loginmodaldiv.style.display = "none";
+            profilebtn.style.display = "block";
+            emaildisplaydiv.innerHTML = email;
+        } else {
+            alert("OTP not Matched");
+        }
+    }
+});
+
+
+cartbtn.addEventListener('click', () => {
+    if (userloggedin) {
+        window.location.href = "cart.html";
+    } else {
+        Loginmodaldiv.style.display = "flex";
+    }
+});
+
+
+profilebtn.addEventListener('click', () => {
+    profilesection.style.display = profilesection.style.display === "none" ? "flex" : "none";
+});
+
+
+function movetonext(currentInput, nextInputId) {
+    if (currentInput.value.length === 1 && nextInputId) {
+        document.getElementById(nextInputId).focus();
+    }
+}
+
+
+window.onload = function() {
+    if (userloggedin) {
+        loginbtn.style.display = "none";
+        profilebtn.style.display = "block";
+        logoutbtn.style.display = "block";
+
+        if (currentuser) {
+            emaildisplaydiv.innerHTML = currentuser;
+        }
+    }
+};
+
+let closebtndiv = document.getElementById("closebtndiv");
+
+closebtndiv.addEventListener('click',()=>{
+    if(Loginmodaldiv.style.display === "flex"){
+        Loginmodaldiv.style.display = "none";
+    }
+});
+
+let orderbtn = document.getElementById("orderbtn");
+
+orderbtn.addEventListener('click',()=>{
+    window.location.href = "orders.html";
+})
+
+
+    </script>
+
+</body>
+
+</html>

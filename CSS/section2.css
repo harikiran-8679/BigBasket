@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'calibri';
+}
+
+.section2{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.section2__body{
+    width: 70%;
+    background-color: #F7F7F7;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.section2__links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section2__link{
+    color: black;
+}
+
+.sec2__btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#sec2__left__arrow__btn{
+    cursor: not-allowed;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.section2__headingdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section2__cardsdiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.4%;
+    transition: transform 0.5s ease-in-out;
+    
+}
+
+.section2__card{
+    background-color: white;
+    border-radius: 5px;
+    height: 32rem;
+    min-width: 250px !important;
+    padding: 1%;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
+
+}
+
+.section2__cardtop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgdiv{
+    position: relative;
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    width: 90%;
+    
+}
+
+.section2__offerdiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #476F00;
+    color: white;
+    font-size: 13px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0.91%;
+}
+
+.section2__card img{
+    width: 100%;
+}
+
+.section2card__body{
+    padding-top: 10%;
+}
+
+.sec2card__namediv{
+    color: rgba(0,0,0,0.5);
+}
+
+.sec2card__namediv h4{
+    color: rgba(0,0,0,0.7);
+}
+.sec2card__inputdiv{
+    margin-top: 15%;
+}
+
+.sec2card__selectdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    padding: 1%;
+    color: rgba(0,0,0,0.5);
+    cursor: pointer;
+
+}
+
+.sec2__pricediv{
+    font-weight: bold;
+}
+
+.sec2__pricediv i{
+    font-size: 13px;
+}
+
+.sec2__pricediv strike{
+    font-weight: normal;
+    font-size: 13px;
+    color: rgba(0,0,0,0.5);
+}
+
+.sec2card__cartdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30%;
+    gap: 1%;
+}
+
+.sec2card__savediv {
+    border: 1px solid rgba(0,0,0,0.3);
+    padding: 2.3%;
+    border-radius: 4px;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sec2card__savediv i{
+    font-size: 20px;
+}
+
+.section2__card__btn{
+    width: 200px;
+    height: 40px;
+    background: none;
+    border: 1.5px solid red;
+    border-radius: 4px;
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+}
+
+.section2__card__btn:hover{
+    background-color: red;
+    color: white;
+    transition: background-color 0.4s ease ;
+}
+
+/* ==================================Section3 CSS================================= */
+
+
+
+.section3{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.section3__body{
+    width: 70%;
+    background-color: #F7F7F7;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.section3__links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section3__link{
+    color: black;
+}
+
+.sec3__btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#sec3__left__arrow__btn{
+    cursor: not-allowed;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.section3__headingdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section3__cardsdiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.4%;
+    transition: transform 0.5s ease-in-out;
+    
+}
+
+.section3__card{
+    background-color: white;
+    border-radius: 5px;
+    height: 32rem;
+    min-width: 250px !important;
+    padding: 1%;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
+}
+
+.section3__cardtop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgdiv{
+    position: relative;
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    width: 90%;
+    
+}
+
+.section3__offerdiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #476F00;
+    color: white;
+    font-size: 13px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0.91%;
+}
+
+.section3__card img{
+    width: 100%;
+}
+
+.section3card__body{
+    padding-top: 10%;
+}
+
+.sec3card__namediv{
+    color: rgba(0,0,0,0.5);
+}
+
+.sec3card__namediv h4{
+    color: rgba(0,0,0,0.7);
+}
+.sec3card__inputdiv{
+    margin-top: 15%;
+}
+
+.sec3card__selectdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    padding: 1%;
+    color: rgba(0,0,0,0.5);
+    cursor: pointer;
+
+}
+
+.sec3__pricediv{
+    font-weight: bold;
+}
+
+.sec3__pricediv i{
+    font-size: 13px;
+}
+
+.sec3__pricediv strike{
+    font-weight: normal;
+    font-size: 13px;
+    color: rgba(0,0,0,0.5);
+}
+
+.sec3card__cartdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30%;
+    gap: 1%;
+}
+
+.sec3card__savediv {
+    border: 1px solid rgba(0,0,0,0.3);
+    padding: 2.3%;
+    border-radius: 4px;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sec3card__savediv i{
+    font-size: 20px;
+}
+
+.section3__card__btn{
+    width: 200px;
+    height: 40px;
+    background: none;
+    border: 1.5px solid red;
+    border-radius: 4px;
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+}
+
+.section3__card__btn:hover{
+    background-color: red;
+    color: white;
+    transition: background-color 0.4s ease ;
+}

@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Basket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../CSS/cartstyles.css">
+
+    <link rel="stylesheet" href="../CSS/login.css">
+
+    <link rel="shortcut icon" href="../Images/BigBasket-Fav.png" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/111755d819.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="nav bg-light d-flex flex-column align-items-center">
+        <div class="navbar">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                <div class="container navbars-top">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="index.html">
+                        <img src="../images/section1/BigBasket-Logo.png" alt="" width="90" height="35">
+                    </a>
+
+                    <!-- Search Bar -->
+                    <form class="d-none d-md-flex flex-grow-1 mx-3">
+                        <input class="form-control search-bar" type="search" placeholder="🔍 Search for Products..."
+                            aria-label="Search">
+                    </form>
+
+                    <!-- Buttons -->
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn my-compass border">
+                            <i class="fa-solid fa-compass"></i> Select Location
+                        </button>
+                        <button class="btn btn-dark text-white login-sign-up" id="loginbtn">Login/Sign <br> Up
+                        </button>
+
+
+                        <div class="logged-inbtn" id="profilebtn">
+                            <i class="fa-solid fa-user"></i>
+                            <div class="profilesection" id="profilesection">
+                                <div class="myaccount">My Account</div>
+                                <div class="mybasket" >My Basket</div>
+                                <div class="myorders" id="orderbtn">My Orders</div>
+                                <div class="mysmartbasket">My Smart Basket</div>
+                                <div class="mywallet">My Wallet</div>
+                                <div class="contactus">Contact Us</div>
+                                <div class="logoutbtn" id="logoutbtn">Logout</div>
+                            </div>
+                        </div>
+
+
+                        <div class="icon-container d-flex justify-content-center align-items-center rounded-3" id="cartsdiv">
+                            <div class="icon-background d-flex justify-content-center align-items-center rounded-circle">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="navbar container bg-transparent">
+            <nav class="navbar container navbar-expand-lg bg-transparent">
+                <div class="container navbars-bottom bg-transparent">
+                    <div class="dropdown">
+                        <button class="btn btn-success me-5 dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Shop by Category
+                        </button>
+                        <div class="dropdown-menu bg-transparent">
+                            <div class="fit-data d-flex justify-content-center">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Electronics</li>
+                                    <li class="list-group-item">Fashion</li>
+                                    <li class="list-group-item">Apparel</li>
+                                    <li class="list-group-item">Fruits & Vegetables</li>
+                                    <li class="list-group-item">Foodgrains, Oil & Masala</li>
+                                    <li class="list-group-item">Bakery, Cakes & Dairy</li>
+                                    <li class="list-group-item">Beverages</li>
+                                    <li class="list-group-item">Snacks & Branded Foods</li>
+                                    <li class="list-group-item">Beauty & Hygiene</li>
+                                    <li class="list-group-item">Cleaning & Household</li>
+                                    <li class="list-group-item">Kitchen, Garden & Pets</li>
+                                    <li class="list-group-item">Eggs, Meat & Fish</li>
+                                    <li class="list-group-item">Gourmet & World Food</li>
+                                    <li class="list-group-item">Baby Care</li>
+                                    <li class="list-group-item">Paan Corner</li>
+                                </ul>
+                                <ul class="list-group">
+                                    <li class="list-group-item">Audio devices</li>
+                                    <li class="list-group-item">Beauty & Grooming</li>
+                                    <li class="list-group-item">Cameras & Accessories</li>
+                                    <li class="list-group-item">Electrical Accessories</li>
+                                    <li class="list-group-item">Home Appliances</li>
+                                    <li class="list-group-item">Kitchen Appliances</li>
+                                    <li class="list-group-item">Phone & Laptop Accessory</li>
+                                    <li class="list-group-item">Phone, Laptop & Tablets</li>
+                                    <li class="list-group-item">Smart Wearables</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ul">
+                            <li class="nav-item">
+                                <a class="nav-link me-4 text-dark" href="#">Exotic Fruits & Vegetables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4 text-dark" href="#">Tea</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4 text-dark" href="#">Ghee</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4 text-dark" href="#">Nandini</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4 text-dark" href="#">Fresh Vegetables >></a>
+                            </li>
+                            <li class="nav-item">
+                                <img src="../images/Navbar images/7.jpeg" alt="">
+                            </li>
+                            <li class="nav-item ms-2">
+                                <div class="d-flex align-items-center gap-3">
+                                    <!-- <button class="btn gap-2 btn-outline-none d-flex">
+                                        <i class="fa-solid mt-2 fa-percent"
+                                        style="color: #5E9400;"></i>
+                                        <div class="mt-1">Offers</div>
+                                    </button> -->
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="div-body">
+        <div class="basket">
+            <div class="defaultdiv">
+                <div class="sub-basket">
+                    <img src="../images/Butta.png" alt="" width="100px" height="100px">
+                </div>
+                <div class="sub-basket2">
+                   <div class="basket-cont">
+                    <p>Let's fill the empty <span> Basket</span></p>
+                    <button class="but" onclick="changepage()">continue shopping</button>
+                   </div> 
+                </div>
+            </div>
+
+
+            <div class="subtotaldiv" id="subtotaldiv">
+                <div class="subtotaldiv__div1">
+                    <h5>Subtotal (<span id="subtotalquantitydiv"></span>) : <span id="subtotalcostdiv"></span></h5>
+                </div>
+                <div class="checkoutdiv">
+                    <button class="checkoutbtn" id="checkoutbtn">Checkout</button>
+                </div>
+            </div>
+
+            <div class="cartdiv" id="cartdiv">
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- ====================Before you checkout======================= -->
+
+
+    <section class="cart__sec2">
+        <div class="cartsec2__body">
+            <div class="cartsec2__headingdiv">
+                <div class="cartsec2__heading"><h5>Before You Checkout</h5></div>
+                <div class="cartsec2__optionsdiv">
+                    <button class="cartsec2__btn" id="artgeeks">Art-Geeks</button>
+                    <button class="cartsec2__btn" id="funactivities">Fun-Activities</button>
+                    <button class="cartsec2__btn" id="bakers">Bakers-Niche</button>
+                </div>
+            </div>
+
+                <div class="cartsec2__cardsdiv art_geeks_div" id="art_geeks_div">
+                    <div class="cartsec2__card">
+                        <div class="cartsec2__cardtop">
+                            <div class="imgdiv">
+                                <!-- <div class="cartsec2__offerdiv"><p>48% OFF</p></div> -->
+                                <img src="../images/cartsection2/artgeeks/1.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="cartsec2card__body">
+                            <div class="cartsec2card__namediv">
+                                <p>Classmate</p>
+                                <h6>Drawing Book - 40 Pages, 27.5 cm x 34.7 cm, Unruled</h6>
+                            </div>
+                            <div class="cartsec2card__inputdiv">
+                                <div class="cartsec2card__selectdiv">
+                                    <p>1pc</p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="cartsec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>50 &nbsp;</div>
+                            </div>
+                            <div class="cartsec2__cartdiv">
+                                <div class="cartsec2__savediv">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                                <div class="cartsec2card__addtocart">
+                                    <button class="cartsection2_card_btn" onclick="addToCart(14,'../images/cartsection2/artgeeks/1.jpeg','Drawing Book - 40 Pages, 27.5 cm x 34.7 cm, Unruled','50')">Add</button>
+                                </div>
+                            </div>
+                            <div class="cartsec2__moreinfodiv">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="cartsec2__card">
+                        <div class="cartsec2__cardtop">
+                            <div class="imgdiv">
+                                <div class="cartsec2__offerdiv"><p><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp;5 OFF</p></div>
+                                <img src="../images/cartsection2/artgeeks/2.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="cartsec2card__body">
+                            <div class="cartsec2card__namediv">
+                                <p>Fevicryl</p>
+                                <h6>Acrylic Colours Lilac Kit - 6 Shades, DIY Paint, Rich Pigment,</h6>
+                            </div>
+                            <div class="cartsec2card__inputdiv">
+                                <div class="cartsec2card__selectdiv">
+                                    <p>60ml</p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="cartsec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>95 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>100</strike></div>
+                            </div>
+                            <div class="cartsec2__cartdiv">
+                                <div class="cartsec2__savediv">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                                <div class="cartsec2card__addtocart">
+                                    <button class="cartsection2_card_btn" onclick="addToCart(15,'../images/cartsection2/artgeeks/2.jpeg','Acrylic Colours Lilac Kit - 6 Shades, DIY Paint, Rich Pigment','95')">Add</button>
+                                </div>
+                            </div>
+    
+                            <div class="cartsec2__moreinfodiv">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cartsec2__card">
+                        <div class="cartsec2__cardtop">
+                            <div class="imgdiv">
+                                <div class="cartsec2__offerdiv"><p><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp;5 OFF</p></div>
+                                <img src="../images/cartsection2/funactivities/5.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="cartsec2card__body">
+                            <div class="cartsec2card__namediv">
+                                <p>Funskool</p>
+                                <h6>Othello - Assorted Colour,</h6>
+                            </div>
+                            <div class="cartsec2card__inputdiv">
+                                <div class="cartsec2card__selectdiv">
+                                    <p>1pc</p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="cartsec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>539 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>100</strike></div>
+                            </div>
+                            <div class="cartsec2__cartdiv">
+                                <div class="cartsec2__savediv">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                                <div class="cartsec2card__addtocart">
+                                    <button class="cartsection2_card_btn" onclick="addToCart(16,'../images/cartsection2/funactivities/5.jpeg','Othello - Assorted Colour','539')">Add</button>
+                                </div>
+                            </div>
+    
+                            <div class="cartsec2__moreinfodiv">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cartsec2__card">
+                        <div class="cartsec2__cardtop">
+                            <div class="imgdiv">
+                                <div class="cartsec2__offerdiv"><p><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp;5 OFF</p></div>
+                                <img src="../images/cartsection2/bakers/5.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="cartsec2card__body">
+                            <div class="cartsec2card__namediv">
+                                <p>Petals</p>
+                                <h6>Silicone Reusable Cupcake/Muffin Cake Moulds - 7 Cm Top Dia,</h6>
+                            </div>
+                            <div class="cartsec2card__inputdiv">
+                                <div class="cartsec2card__selectdiv">
+                                    <p>6pcs</p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="cartsec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>199 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>100</strike></div>
+                            </div>
+                            <div class="cartsec2__cartdiv">
+                                <div class="cartsec2__savediv">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                                <div class="cartsec2card__addtocart">
+                                    <button class="cartsection2_card_btn" onclick="addToCart(17,'../images/cartsection2/bakers/5.jpeg','Silicone Reusable Cupcake/Muffin Cake Moulds - 7 Cm Top Dia','199')">Add</button>
+                                </div>
+                            </div>
+    
+                            <div class="cartsec2__moreinfodiv">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cartsec2__cardsdiv fun_activities_div" id="fun_activities_div">
+                    <div class="cartsec2__card">
+                        <div class="cartsec2__cardtop">
+                            <div class="imgdiv">
+                                <!-- <div class="cartsec2__offerdiv"><p>48% OFF</p></div> -->
+                                <img src="../images/cartsection2/funactivities/1.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="cartsec2card__body">
+                            <div class="cartsec2card__namediv">
+                                <p>Ekta</p>
+                                <h6>Chess Board Game Set For Kids 5 Years & Up, Classic Game Of Skill</h6>
+                            </div>
+                            <div class="cartsec2card__inputdiv">
+                                <div class="cartsec2card__selectdiv">
+                                    <p>1pc</p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="cartsec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>199 &nbsp;</div>
+                            </div>
+                            <div class="cartsec2__cartdiv">
+                                <div class="cartsec2__savediv">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                                <div class="cartsec2card__addtocart">
+                                    <button class="cartsection2_card_btn" onclick="addToCart(18,'../images/cartsection2/funactivities/1.jpeg','Chess Board Game Set For Kids 5 Years & Up, Classic Game Of Skill','199')">Add</button>
+                                </div>
+                            </div>
+    
+                            <div class="cartsec2__moreinfodiv">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="cartsec2__card">
+                        <div class="cartsec2__cardtop">
+                            <div class="imgdiv">
+                                <div class="cartsec2__offerdiv"><p><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp;5 OFF</p></div>
+                                <img src="../images/cartsection2/funactivities/2.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="cartsec2card__body">
+                            <div class="cartsec2card__namediv">
+                                <p>Ekta</p>
+                                <h6>International Business Games Monopoly For Kids & Adult,</h6>
+                            </div>
+                            <div class="cartsec2card__inputdiv">
+                                <div class="cartsec2card__selectdiv">
+                                    <p>60ml</p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="cartsec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>279 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>100</strike></div>
+                            </div>
+                            <div class="cartsec2__cartdiv">
+                                <div class="cartsec2__savediv">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                                <div class="cartsec2card__addtocart">
+                                    <button class="cartsection2_card_btn" onclick="addToCart(19,'../images/cartsection2/funactivities/2.jpeg','International Business Games Monopoly For Kids & Adult','279')">Add</button>
+                                </div>
+                            </div>
+    
+                            <div class="cartsec2__moreinfodiv">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cartsec2__card">
+                        <div class="cartsec2__cardtop">
+                            <div class="imgdiv">
+                                <div class="cartsec2__offerdiv"><p><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp;5 OFF</p></div>
+                                <img src="../images/cartsection2/funactivities/3.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="cartsec2card__body">
+                            <div class="cartsec2card__namediv">
+                                <p>CS</p>
+                                <h6>Playing Cards Rummy, Bridge & Poker, Premium Quality</h6>
+                            </div>
+                            <div class="cartsec2card__inputdiv">
+                                <div class="cartsec2card__selectdiv">
+                                    <p>1 pc</p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="cartsec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>95 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>100</strike></div>
+                            </div>
+                            <div class="cartsec2__cartdiv">
+                                <div class="cartsec2__savediv">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                                <div class="cartsec2card__addtocart">
+                                    <button class="cartsection2_card_btn" onclick="addToCart(25,'../images/cartsection2/funactivities/3.jpeg','Playing Cards Rummy, Bridge & Poker, Premium Quality','95')">Add</button>
+                                </div>
+                            </div>
+    
+                            <div class="cartsec2__moreinfodiv">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cartsec2__card">
+                        <div class="cartsec2__cardtop">
+                            <div class="imgdiv">
+                                <div class="cartsec2__offerdiv"><p><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp;5 OFF</p></div>
+                                <img src="../images/cartsection2/funactivities/4.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="cartsec2card__body">
+                            <div class="cartsec2card__namediv">
+                                <p>Ekta</p>
+                                <h6>Crossword An English Word Puzzle Game Crossword Board</h6>
+                            </div>
+                            <div class="cartsec2card__inputdiv">
+                                <div class="cartsec2card__selectdiv">
+                                    <p>1 pc</p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="cartsec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>299 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>100</strike></div>
+                            </div>
+                            <div class="cartsec2__cartdiv">
+                                <div class="cartsec2__savediv">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                                <div class="cartsec2card__addtocart">
+                                    <button class="cartsection2_card_btn" onclick="addToCart(20,'../images/cartsection2/funactivities/4.jpeg','Crossword An English Word Puzzle Game Crossword Board','299')">Add</button>
+                                </div>
+                            </div>
+    
+                            <div class="cartsec2__moreinfodiv">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="cartsec2__cardsdiv bakers_div" id="bakers_div">
+                    <div class="cartsec2__card">
+                        <div class="cartsec2__cardtop">
+                            <div class="imgdiv">
+                                <!-- <div class="cartsec2__offerdiv"><p>48% OFF</p></div> -->
+                                <img src="../images/cartsection2/bakers/1.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="cartsec2card__body">
+                            <div class="cartsec2card__namediv">
+                                <p>Hershey's</p>
+                                <h6>Chocolate Syrup</h6>
+                            </div>
+                            <div class="cartsec2card__inputdiv">
+                                <div class="cartsec2card__selectdiv">
+                                    <p>623 g - Bottle</p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="cartsec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>232.5 &nbsp;</div>
+                            </div>
+                            <div class="cartsec2__cartdiv">
+                                <div class="cartsec2__savediv">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                                <div class="cartsec2card__addtocart">
+                                    <button class="cartsection2_card_btn" onclick="addToCart(21,'../images/cartsection2/bakers/1.jpeg','Chocolate Syrup','232.5')">Add</button>
+                                </div>
+                            </div>
+    
+                            <div class="cartsec2__moreinfodiv">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="cartsec2__card">
+                        <div class="cartsec2__cardtop">
+                            <div class="imgdiv">
+                                <div class="cartsec2__offerdiv"><p><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp;5 OFF</p></div>
+                                <img src="../images/cartsection2/bakers/2.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="cartsec2card__body">
+                            <div class="cartsec2card__namediv">
+                                <p>Betty Crocker</p>
+                                <h6>Cake Mix - Choco Fudge Rich Chocolate</h6>
+                            </div>
+                            <div class="cartsec2card__inputdiv">
+                                <div class="cartsec2card__selectdiv">
+                                    <p>475 g - Carton</p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="cartsec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>378 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>100</strike></div>
+                            </div>
+                            <div class="cartsec2__cartdiv">
+                                <div class="cartsec2__savediv">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                                <div class="cartsec2card__addtocart">
+                                    <button class="cartsection2_card_btn" onclick="addToCart(22,'../images/cartsection2/bakers/2.jpeg','Cake Mix - Choco Fudge Rich Chocolate','378')">Add</button>
+                                </div>
+                            </div>
+    
+                            <div class="cartsec2__moreinfodiv">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cartsec2__card">
+                        <div class="cartsec2__cardtop">
+                            <div class="imgdiv">
+                                <div class="cartsec2__offerdiv"><p><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp;5 OFF</p></div>
+                                <img src="../images/cartsection2/bakers/3.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="cartsec2card__body">
+                            <div class="cartsec2card__namediv">
+                                <p>Weikfield</p>
+                                <h6>Cocoa Powder</h6>
+                            </div>
+                            <div class="cartsec2card__inputdiv">
+                                <div class="cartsec2card__selectdiv">
+                                    <p>150g</p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="cartsec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>219 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>225</strike></div>
+                            </div>
+                            <div class="cartsec2__cartdiv">
+                                <div class="cartsec2__savediv">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                                <div class="cartsec2card__addtocart">
+                                    <button class="cartsection2_card_btn" onclick="addToCart(23,'../images/cartsection2/bakers/3.jpeg','Cocoa Powder','219')">Add</button>
+                                </div>
+                            </div>
+    
+                            <div class="cartsec2__moreinfodiv">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cartsec2__card">
+                        <div class="cartsec2__cardtop">
+                            <div class="imgdiv">
+                                <div class="cartsec2__offerdiv"><p><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp;5 OFF</p></div>
+                                <img src="../images/cartsection2/bakers/4.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="cartsec2card__body">
+                            <div class="cartsec2card__namediv">
+                                <p>HappyChef</p>
+                                <h6>Dry Yeast</h6>
+                            </div>
+                            <div class="cartsec2card__inputdiv">
+                                <div class="cartsec2card__selectdiv">
+                                    <p>60ml</p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="cartsec2__pricediv"><i class="fa-solid fa-indian-rupee-sign"></i>95 &nbsp;<strike><i class="fa-solid fa-indian-rupee-sign"></i>100</strike></div>
+                            </div>
+                            <div class="cartsec2__cartdiv">
+                                <div class="cartsec2__savediv">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                                <div class="cartsec2card__addtocart">
+                                    <button class="cartsection2_card_btn" onclick="addToCart(24,'../images/cartsection2/bakers/4.jpeg','Dry Yeast','95')">Add</button>
+                                </div>
+                            </div>
+    
+                            <div class="cartsec2__moreinfodiv">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- <div class="cartsec2__links">
+                    <a href="#" class="cartsec2__link">View all</a>
+                    <div class="cartsec2__btndiv">
+                        <button class="cartsec2_btn" id="sec3leftarrow_btn"><i class="fa-solid fa-angle-left"></i></button>
+                        <button class="cartsec2_btn" id="sec3rightarrow_btn"><i class="fa-solid fa-angle-right"></i></button>
+                    </div>
+                </div> -->
+            </div>
+    </section>
+
+
+    <!-- ==================================Login Modal========================= -->
+
+    <div class="Loginmodaldiv" id="Loginmodaldiv">
+        <div class="Logindiv">
+            <div class="whybigbasketdiv">
+                <div class="heading">
+                    <p>Why choose Bigbasket?</p>
+                </div>
+                <div class="icondiv">
+                    <div class="icondiv1">
+                        <span class="icon1"><i class="fa-solid fa-bottle-droplet"></i><p>Quality</p></span>
+                        <span class="icon2"><i class="fa-solid fa-clock"></i><p>On Time</p></span>
+                    </div>
+                    <div class="icondiv2">
+                        <span class="icon3"><i class="fa-solid fa-truck-moving"></i><p>Return Policy</p></span>
+                        <span class="icon4"><i class="fa-solid fa-basket-shopping"></i><p>Free Delivery</p></span>
+                    </div>  
+                </div>
+
+                <div class="seperationdiv"></div>
+
+                <div class="findusdiv">
+                    <p>Find Us on</p>
+                    <div class="playstorediv">
+                        <img src="../images/playstore.png" alt="">
+                    </div>
+
+                    <div class="applediv">
+                        <img src="../images/apple.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <form class="formdiv" id="form">
+                <div class="closebtndiv" id="closebtndiv">x</div>
+                <div class="formheadingdiv">
+                    <h3 id="loginsignupdiv">Login/ Sign up</h3>
+                    <p id="headingemaildiv">Using OTP</p>
+                    <div class="formseperationdiv"></div>
+                </div>
+
+                <div class="inputdiv">
+                    <input type="email" class="inputfield" id="Email" placeholder="Enter Email Id">
+                </div>
+
+                <div class="OTPdiv" id="OTPdiv">
+                    <input type="text" name="" id="otp1" maxlength="1" oninput="movetonext(this,'otp2')">
+                    <input type="text" name="" id="otp2" maxlength="1" oninput="movetonext(this,'otp3')">
+                    <input type="text" name="" id="otp3" maxlength="1" oninput="movetonext(this,'otp4')">
+                    <input type="text" name="" id="otp4" maxlength="1" oninput="movetonext(this,'otp5')">
+                    <input type="text" name="" id="otp5" maxlength="1" oninput="movetonext(this,'otp6')">
+                    <input type="text" name="" id="otp6" maxlength="1" oninput="movetonext(this,'')">
+                </div>
+
+                <div class="submitbtndiv">
+                    <input type="submit" value="Continue" class="submitbtn" id="submitbtn">
+                </div>
+
+                <div class="logintermsconditionsdiv" id="logintermsconditionsdiv">
+                    <p>By continuing, I accept TCP - bigbasket's Terms and Conditions & Privacy Policy.This site is protected by reCAPTCHA and the Google - Privacy Policy and & Terms of Service <br> apply.</p>
+                </div>
+
+                <div class="resenddiv" id="resenddiv">
+                    <p id="resendmail">Resend OTP</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ===================Footer================ -->
+    <div class="footer">
+        <div class="footdiv-1">
+          <div class="subfoot-1">
+            <h3 class="footh-3">big basket</h3>
+            <p class="footp">About us</p>
+            <p class="footp">Become a bigbasket Rider</p>
+            <p class="footp">In news</p>
+            <p class="footp">Green big basket</p>
+            <p class="footp">Privacy policy</p>
+            <p class="footp">Terms and Conditions</p>
+            <p class="footp">Careers at big basket</p>
+            <p class="footp">bb instant</p>
+            <p class="footp">bb Daily</p>
+            <p class="footp">bb Blog</p>
+            <p class="footp">bbnow</p>
+          </div>
+          <div class="subfoot-1">
+           
+              <h3 class="footh-3">Help</h3>
+              <p class="footp">FAQs</p>
+              <p class="footp">Contact us</p>
+              <p class="footp">bb Wallet FAQs</p>
+              <p class="footp">bb Wallet Q&Cs</p>
+              <p class="footp">Vendor Connect</p>
+             
+             </div>
+          <div class="subfoot-11">
+            <div class="imgdiv">
+            <img src="../images/footerbbicon.png" class="img-fluid" alt="" width="180px" height="90px">
+         
+            </div>
+            <div class="buttons">
+                <button class="border d-flex justify-content-center align-items-center" style="padding-inline: 1%;">
+                  <div class="footerbtn__icondiv"><img src="../images/playstore.png" alt=""></div>
+                  <div class="footerbtn__textdiv">
+                      <p>GET IT ON</p>
+                      <h6>Google Play</h6>
+                  </div>
+                </button>
+                <button class="border d-flex justify-content-center align-items-center">
+                  <div class="footerbtn__icondiv"><img src="../images/apple.png" alt="" style="width: 35px; height: 35px;"></div>
+                  <div class="footerbtn__textdiv">
+                      <p>GET IT ON</p>
+                      <h6>Google Play</h6>
+                  </div>
+              </button>
+              </div>
+            <div class="icons">
+              <i class="fa-brands fa-facebook face"></i>
+              <i class="fa-brands fa-youtube you face2"></i>
+              <i class="fa-brands fa-instagram face2"></i>
+              <i class="fa-brands fa-twitter face2"></i>
+            </div>
+           </div>
+        </div>
+        <div class="footdiv-2">
+          <div class="footdiv-2head">
+             <center>  <h6 class="foot2head">Cities we serve</h6></center>
+          </div>
+          <div class="footdiv-2cont">
+            <p>Abohar | Abu Road | Achampet | Achrol | Adampur | Addanki | Addateegala | Adilabad | Adimali | Adoni | Adoor | Afzalpur | Agali | AGARTALA | Agra | </p>
+          </div>
+        </div>
+        <div class="footdiv-3">
+            <div class="subfoot-3">
+              <h3 class="footh-3">Popular Categories</h3>
+              <p class="footp">sunflower oils</p>
+              <p class="footp">Milk</p>
+              <p class="footp">Organic F&V</p>
+              <p class="footp">Floor cleaners</p>
+              <p class="footp">Frozen veg food</p>
+            </div>
+            <div class="subfoot-4">
+              <p class="footp">wheet atta</p>
+              <p class="footp">Health drinks</p>
+              <p class="footp">Namkeen</p>
+              <p class="footp">Other juices</p>
+              <p class="footp">Diapers & wipes</p>
+            </div>
+            <div class="subfoot-4">
+              <p class="footp">Ghee</p>
+              <p class="footp">Flakes</p>
+              <p class="footp">Eggs</p>
+              <p class="footp">Leafy vegetables</p>
+            </div>
+            <div class="subfoot-3">
+              <h3 class="footh-3">Popular Brands</h3>
+              <p class="footp">Amul</p>
+              <p class="footp">Red bull</p>
+              <p class="footp">Yummaiz</p>
+              <p class="footp">Bratannia</p>
+              <p class="footp">Haldrams's</p>
+            </div>
+            <div class="subfoot-4">
+              <p class="footp">Nescafe</p>
+              <p class="footp">elite cake</p>
+              <p class="footp">yera</p>
+              <p class="footp">wow momo!</p>
+              <p class="footp">Ferrero</p>
+            </div>
+            <div class="subfoot-4">
+              <p class="footp">MTR</p>
+              <p class="footp">pediasure</p>
+              <p class="footp">Yakult</p>
+              <p class="footp">Fortune</p>
+              <p class="footp">Lay's</p>
+            </div>
+        </div>
+        <div class="showmore"><p >Show more +</p></div>
+    </div>
+    <div class="finalfoot">
+      <div class="copy">
+      <p>Copyright © 2024-2026 Supermarket Grocery Supplies Pvt Ltd</p>
+      </div>
+    </div>
+
+    <script src="../JS/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded',()=>{
+
+        });
+        const artbtn = document.getElementById("artgeeks");
+const funactivities = document.getElementById("funactivities");
+const bakers = document.getElementById("bakers");
+
+const art_geeks_div = document.getElementById("art_geeks_div");
+const fun_activities_div = document.getElementById("fun_activities_div");
+const bakers_div = document.getElementById("bakers_div");
+let funactivities__scrollamoount = 0;
+
+artbtn.addEventListener('click',()=>{
+    art_geeks_div.style.display = "flex";
+    fun_activities_div.style.display = "none";
+    bakers_div.style.display = "none";
+    artbtn.style.backgroundColor = "black";
+    artbtn.style.color = "white";
+
+    funactivities.style.backgroundColor = "white";
+    funactivities.style.color = "black";
+
+    bakers.style.backgroundColor = "white";
+    bakers.style.color = "black";
+});
+
+funactivities.addEventListener('click',()=>{
+    console.log("Funactivities")
+    art_geeks_div.style.display = "none";
+    fun_activities_div.style.display = "flex";
+    bakers_div.style.display = "none";
+    artbtn.style.backgroundColor = "white";
+    artbtn.style.color = "black";
+
+    funactivities.style.backgroundColor = "black";
+    funactivities.style.color = "white";
+
+    bakers.style.backgroundColor = "white";
+    bakers.style.color = "black";
+});
+
+bakers.addEventListener('click',()=>{
+    console.log("backer");
+    art_geeks_div.style.display = "none";
+    fun_activities_div.style.display = "none";
+    bakers_div.style.display = "flex";
+    artbtn.style.backgroundColor = "white";
+    artbtn.style.color = "black";
+
+    funactivities.style.backgroundColor = "white";
+    funactivities.style.color = "black";
+
+    bakers.style.backgroundColor = "black";
+    bakers.style.color = "white";
+});
+
+
+//=============================================Logout/Login Functionality=====================================
+
+let emaildisplaydiv = document.getElementById("emaildisplaydiv");
+let emailfield = document.getElementById("Email");
+let OTPDIV = document.getElementById("OTPdiv");
+let formheadingdiv = document.getElementById("loginsignupdiv");
+let headingemaildiv = document.getElementById("headingemaildiv");
+let submitbtn = document.getElementById("submitbtn");
+let terms_conditionsdiv = document.getElementById("logintermsconditionsdiv");
+let resenddiv = document.getElementById("resenddiv");
+let form = document.getElementById('form');
+let Loginmodaldiv = document.getElementById("Loginmodaldiv");
+let profilebtn = document.getElementById("profilebtn");
+
+document.addEventListener('DOMContentLoaded',()=>{
+    let logoutbtn = document.getElementById("logoutbtn");
+    let profilesection = document.getElementById("profilesection");
+
+
+    logoutbtn.addEventListener('click', () => {
+        console.log("logout section");
+        alert("Logging out...");
+        localStorage.removeItem('currentuser');
+        localStorage.removeItem('userloggedin');
+        profilebtn.style.display = "none";
+        loginbtn.style.display = "flex";
+        logoutbtn.style.display = "none";
+        profilesection.style.display = "none";
+    });
+});
+
+
+
+
+profilesection.style.display = "none";
+logoutbtn.style.display = "none";
+Loginmodaldiv.style.display = "none";
+
+
+let userdetails = JSON.parse(localStorage.getItem('loggeduserdetails')) || [];
+let userloggedin = JSON.parse(localStorage.getItem('userloggedin')) || false;
+
+
+//===================================Profile Section===================================
+
+profilebtn.addEventListener('click', () => {
+    console.log(profilebtn);
+    profilesection.style.display = profilesection.style.display === "none" ? "flex" : "none";
+});
+
+
+//===================================================OTP Generation and Sending===============================
+
+function generateotp() {
+    return Math.floor(100000 + Math.random() * 900000).toString();
+}
+
+
+emailjs.init("U4Njn7Y5_7iUzg-95");
+
+
+function sendotp(email) {
+    const OTP = generateotp();
+    let templateparams = {
+        to_email: email,
+        code: OTP
+    };
+
+    emailjs.send("service_jw7pldj", "template_x2wifcp", templateparams)
+        .then(response => {
+            emailfield.style.display = "none";
+            OTPDIV.style.display = "flex";
+            formheadingdiv.innerHTML = "Verify Email";
+            headingemaildiv.innerHTML = email;
+            submitbtn.value = "Verify & Continue";
+            terms_conditionsdiv.style.display = "none";
+            resenddiv.style.display = "block";
+            localStorage.setItem('OTP', OTP);
+        })
+        .catch(error => {
+            console.error("Error sending OTP:", error);
+        });
+}
+
+
+let isverifying = false;
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const email = emailfield.value;
+
+    if (!isverifying) {
+        if (email === "") {
+            alert("Enter Email Address");
+        } else {
+            sendotp(email);
+            isverifying = true;
+        }
+    } else {
+        let enteredOTP = Array.from(document.querySelectorAll("[id^='otp']"))
+            .map(input => input.value)
+            .join('');
+        let storedOTP = localStorage.getItem('OTP');
+
+        if (enteredOTP === "") {
+            alert("Enter Valid OTP");
+        } else if (enteredOTP === storedOTP) {
+            alert("OTP Matched");
+            userdetails.push({ email: email });
+            localStorage.setItem('loggeduserdetails', JSON.stringify(userdetails));
+            localStorage.setItem('currentuser', JSON.stringify(email));
+            localStorage.setItem('userloggedin', true);
+            Loginmodaldiv.style.display = "none";
+            profilebtn.style.display = "block";
+            emaildisplaydiv.innerHTML = email;
+        } else {
+            alert("OTP not Matched");
+        }
+    }
+});
+
+// Login btn modal
+
+let loginbtn = document.getElementById("loginbtn");
+Loginmodaldiv.style.display = "none";
+
+loginbtn.addEventListener('click',()=>{
+    if(Loginmodaldiv.style.display === "none")
+    {
+        console.log("hi");
+        Loginmodaldiv.style.display = "flex";
+    }
+    else{
+        Loginmodaldiv.style.display = "none";
+    }
+})
+
+
+// Cart functionality
+
+
+
+function showCart() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartitems = document.getElementById("cartdiv");
+    const subtotaldiv = document.getElementById("subtotaldiv");
+    const defaultdiv = document.querySelector(".defaultdiv");
+    const subtotalquantitydiv = document.getElementById("subtotalquantitydiv");
+    const subtotalcostdiv = document.getElementById("subtotalcostdiv");
+
+    subtotaldiv.style.display = "none";
+
+    let basket = document.getElementsByClassName("basket")[0];
+
+    if (cart.length === 0) {
+        defaultdiv.style.display = "block";
+        defaultdiv.style.backgroundColor = "#F1F8E6";
+        cartitems.innerHTML = '';
+        subtotalquantitydiv.innerText = '0';
+        subtotalcostdiv.innerText = '₹0';
+    } else {
+        defaultdiv.style.display = "none";
+        basket.style.backgroundColor = "white";
+        subtotaldiv.style.display = "flex";
+
+
+        let totalQuantity = 0;
+        let totalCost = 0;
+        
+
+        cartitems.innerHTML = cart.map((item, index) => {
+        
+            totalQuantity += item.quantity;
+            totalCost += item.cost * item.quantity;
+        
+        return `
+            <div class="cart-item">
+                <div class="cartitem__div1">
+                    <div class="cartitem__imgdiv">
+                        <img src="${item.url}" class="cartitemimg" width="100px" height="100px">
+                    </div>
+                    <div class="cart__name__div">
+                        <h6>${item.name}</h6>
+                        <p>₹${item.cost}</p>
+                    </div>
+                </div>
+
+                <div class="cartitem__div2">
+                    <div class="cartitem__quantitydiv">
+                        <button onclick="updateQuantity(${index}, 'decrease')">-</button>
+                        <p id="cartquantity-${index}">${item.quantity}</p>
+                        <button onclick="updateQuantity(${index}, 'increase')">+</button>
+                    </div>
+
+                    <div class="dustbinicondiv">
+                        <i class="fa-solid fa-trash" id="deleteicon" onclick="removeFromCart(${index})"></i>
+                    </div>
+
+                    <div class="cartitem__subtotaldiv">
+                        <p>₹${item.cost * item.quantity}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        }).join('');
+
+        subtotalquantitydiv.innerText = totalQuantity + ' items';
+        subtotalcostdiv.innerText = `₹ ${totalCost}`;
+
+        
+    }
+}
+
+function updateQuantity(index, action) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (action === 'increase') {
+        cart[index].quantity += 1;
+    } else if (action === 'decrease' && cart[index].quantity > 1) {
+        cart[index].quantity -= 1;
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    showCart(); 
+}
+
+
+
+function removeFromCart(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1); 
+    localStorage.setItem('cart', JSON.stringify(cart));
+    showCart(); 
+}
+
+window.onload = showCart;
+
+// ======================Add to cart========================
+
+function addToCart(id,url,name,cost){
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let existingitem = undefined;
+
+    for (let i = 0; i<cart.length ; i++)
+    {
+        if(cart[i].id === id){
+            existingitem = cart[i];
+        }
+    }
+
+    if(existingitem){
+        existingitem.quantity+=1;
+    }
+    else{
+        cart.push({id,url,name,cost,quantity:1});
+    }
+
+    localStorage.setItem('cart',JSON.stringify(cart));
+    alert(`${name} added to cart`);
+}
+
+function changepage(){
+    window.location.href = "index.html";
+}
+
+
+let currentuser = JSON.parse(localStorage.getItem('currentuser')) || null;
+
+        if (userloggedin) {
+            loginbtn.style.display = "none";
+            profilebtn.style.display = "block";
+            logoutbtn.style.display = "block";
+    
+            if (currentuser) {
+                //emaildisplaydiv.innerHTML = currentuser;
+            }
+        }
+
+let closebtndiv = document.getElementById("closebtndiv");
+
+closebtndiv.addEventListener('click',()=>{
+    if(Loginmodaldiv.style.display === "flex"){
+        Loginmodaldiv.style.display = "none";
+    }
+})
+
+
+let checkoutbtn = document.getElementById("checkoutbtn");
+console.log(checkoutbtn);
+checkoutbtn.addEventListener('click',()=>{
+    console.log("Hi");
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+    orders.push(...cart);
+        
+    localStorage.setItem('orders',JSON.stringify(orders));
+    localStorage.removeItem('cart');
+    
+    showCart();
+    
+    alert("order Placed Successfully");
+    })
+
+
+    /*=========================Orderbtnnavigation================*/
+
+
+    let orderbtn = document.getElementById("orderbtn");
+
+orderbtn.addEventListener('click',()=>{
+    window.location.href = "orders.html";
+})
+
+    </script>
+</body>
+</html>

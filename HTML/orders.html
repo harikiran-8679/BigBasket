@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/orders.css">
+    <link rel="shortcut icon" href="../images/section1/BigBasket-Fav.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/111755d819.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="maindiv">
+        <div class="navbardiv">
+            <div class="nav sticky-top">
+                <div class="nav-topCon">
+                    <div class="container navbars-top">
+        
+                        <a class="navbar-brand" href="index.html">
+                            <img src="../images/section1/BigBasket-Logo.png" alt="" height="32" width="92"
+                                style="margin-top: -5%;">
+                        </a>
+        
+                        <form action="">
+                            <input class="form-control search-bar ms-2 me-2" type="search" placeholder="🔍 Search for Products..."
+                            aria-label="Search">
+                        </form>
+        
+                        <div class="d-flex align-items-center gap-3">
+        
+                            <button class="my-compass" style="width: 8rem; padding-inline: 1%; padding-block: 2%; font-size: 15px;"><i
+                                    class="fa-solid fa-compass"></i> Select Location</button>
+        
+                            
+        
+                            <div class="logged-inbtn" id="profilebtn">
+                                <i class="fa-solid fa-user"></i>
+                                <div class="profilesection" id="profilesection">
+                                    <div class="myaccount">My Account</div>
+                                    <div class="mybasket" >My Basket</div>
+                                    <div class="myorders">My Orders</div>
+                                    <div class="mysmartbasket">My Smart Basket</div>
+                                    <div class="mywallet">My Wallet</div>
+                                    <div class="contactus">Contact Us</div>
+                                    <div class="logoutbtn" id="logoutbtn">Logout</div>
+                                </div>
+                            </div>
+        
+                            <button
+                                style="border: transparent; width: 4rem; margin-left: -5%; background-color: transparent;">
+                                <div class="icon-container d-flex justify-content-center p-2 align-items-center rounded-3"
+                                    id="cartsdiv cartbtn" style="padding-inline: 8%;">
+                                    <div class="icon-background d-flex justify-content-center align-items-center rounded-circle"
+                                        style="padding-inline: 7% !important; ">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </div>
+                                </div>
+                            </button>
+        
+                        </div>
+        
+                    </div>
+        
+                    <div class="container d-flex navbars-bottom bg-transparent">
+                        <div class="dropdown">
+                            <button class="btn btn-success me-5 dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #5E9400;">
+                                <b class="pe-3">Shop by Category</b>
+                            </button>
+                            <div class="dropdown-menu bg-transparent">
+                                <div class="fit-data d-flex justify-content-center">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Electronics</li>
+                                        <li class="list-group-item">Fashion</li>
+                                        <li class="list-group-item">Apparel</li>
+                                        <li class="list-group-item">Fruits & Vegetables</li>
+                                        <li class="list-group-item">Foodgrains, Oil & Masala</li>
+                                        <li class="list-group-item">Bakery, Cakes & Dairy</li>
+                                        <li class="list-group-item">Beverages</li>
+                                        <li class="list-group-item">Snacks & Branded Foods</li>
+                                        <li class="list-group-item">Beauty & Hygiene</li>
+                                        <li class="list-group-item">Cleaning & Household</li>
+                                        <li class="list-group-item">Kitchen, Garden & Pets</li>
+                                        <li class="list-group-item">Eggs, Meat & Fish</li>
+                                        <li class="list-group-item">Gourmet & World Food</li>
+                                        <li class="list-group-item">Baby Care</li>
+                                        <li class="list-group-item">Paan Corner</li>
+                                    </ul>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Audio devices</li>
+                                        <li class="list-group-item">Beauty & Grooming</li>
+                                        <li class="list-group-item">Cameras & Accessories</li>
+                                        <li class="list-group-item">Electrical Accessories</li>
+                                        <li class="list-group-item">Home Appliances</li>
+                                        <li class="list-group-item">Kitchen Appliances</li>
+                                        <li class="list-group-item">Phone & Laptop Accessory</li>
+                                        <li class="list-group-item">Phone, Laptop & Tablets</li>
+                                        <li class="list-group-item">Smart Wearables</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="container d-flex m-0 access-links">
+        
+                            <a class="nav-link me-4 text-dark" href="#" style="margin-left: -5%;">Exotic Fruits &
+                                Vegetables</a>
+                            <a class="nav-link me-5 text-dark" href="#">Tea</a>
+                            <a class="nav-link me-5 text-dark" href="#">Ghee</a>
+                            <a class="nav-link me-5 text-dark" href="#">Nandini</a>
+        
+                            <a class="nav-link me-5 text-dark" href="#">Fresh Vegetables >></a>
+        
+                            <img src="../images/Navbar images/7.jpeg" class="mt-2" alt="" width="65px" height="25px">
+                            <img src="../images/Navbar images/8.png" class="mt-2 ms-3" alt="" width="65px"
+                                height="25px">
+        
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="ordersdiv">
+
+            <div class="headingdiv">
+                <h3>Your Orders</h3>
+            </div>
+            <div class="ordersdivbody" id="ordersdiv">
+
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+
+        let profilebtn = document.getElementById("profilebtn");
+
+
+        document.addEventListener('DOMContentLoaded',()=>{
+            let logoutbtn = document.getElementById("logoutbtn");
+            let profilesection = document.getElementById("profilesection");
+        
+        
+            logoutbtn.addEventListener('click', () => {
+                console.log("logout section");
+                alert("Logging out...");
+                localStorage.removeItem('currentuser');
+                localStorage.removeItem('userloggedin');
+                localStorage.removeItem('orders');
+                profilesection.style.display = "none";
+                window.location.href = "index.html";
+            });
+        });
+
+        profilesection.style.display = "none";
+
+        
+
+        profilebtn.addEventListener('click', () => {
+            profilesection.style.display = profilesection.style.display === "none" ? "flex" : "none";
+        });
+
+
+        /*====================================Ordersdiv========================================*/
+
+        let ordersdiv = document.getElementById("ordersdiv");
+
+        function showOrders(){
+            const orderItems = JSON.parse(localStorage.getItem('orders')) || [];
+
+
+            if(orderItems.length === 0){
+                ordersdiv.style.display = "flex";
+                ordersdiv.style.display = "center"
+                ordersdiv.innerHTML = `
+                    <h4 class="Noordersdiv">
+                        No Orders Present!!
+                    </h4>
+                        
+                
+                `;
+            }
+            else{
+                ordersdiv.style.display = "flex";
+                ordersdiv.style.display = "center";
+
+                ordersdiv.innerHTML = orderItems.map(item => `
+                <div class="order_item">
+                    <div class="orderitem__imgdiv">
+                        <img src="${item.url}" class="cartitemimg" width="100px" height="100px">
+                    </div>
+                    <div class="cart__name__div">
+                        <h6>${item.name}</h6>
+                        <p>₹${item.cost}</p>
+                    </div>
+                </div>
+
+                
+                `).join('');
+            }
+        }
+
+        window.onload = showOrders;
+    </script>
+    
+</body>
+</html>

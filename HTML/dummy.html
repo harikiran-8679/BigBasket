@@ -1,0 +1,191 @@
+<!-- <script>
+
+    let loginbtn = document.getElementById("loginbtn");
+    let Loginmodaldiv = document.getElementById("Loginmodaldiv"); 
+    let cartbtn = document.getElementById("cartsdiv");
+    let profilebtn = document.getElementById("profilebtn");
+    let logoutsection = document.getElementById("logoutsection");
+    let logoutbtn = document.getElementById("logoutbtn");
+    logoutsection.style.display = "none";
+    let emaildisplaydiv = document.getElementById("emaildisplaydiv");
+    let userdetails = JSON.parse(localStorage.getItem('loggeduserdetails')) || [];
+    let currentuser = JSON.parse(localStorage.getItem('currentuser')) || null;
+
+
+    logoutbtn.addEventListener('click',()=>{
+        alert("hello");
+        localStorage.removeItem('currentuser');
+        localStorage.removeItem('userloggedin');
+        profilebtn.style.display = "none";
+        loginbtn.style.display = "flex";
+        logoutbtn.style.display = "none";
+        logoutsection.style.display = "none";
+    })
+
+    
+    
+
+    Loginmodaldiv.style.display = "none";
+
+    loginbtn.addEventListener('click',()=>{
+        if(Loginmodaldiv.style.display === "none")
+        {
+            console.log("hi");
+            Loginmodaldiv.style.display = "flex";
+        }
+        else{
+            Loginmodaldiv.style.display = "none";
+        }
+    });
+
+    
+    let emailfield = document.getElementById("Email");
+    let OTPDIV = document.getElementById("OTPdiv");
+    let formheadingdiv = document.getElementById("loginsignupdiv");
+    let headingemaildiv = document.getElementById("headingemaildiv");
+    let submitbtn = document.getElementById("submitbtn");
+    let terms_conditionsdiv = document.getElementById("logintermsconditionsdiv");
+    let resenddiv = document.getElementById("resenddiv");
+    let isverifying = false;
+    let OTP = "";
+
+    let form = document.getElementById('form');
+
+    function generateotp(){
+        OTP = "";
+        for(let i = 0;i<6; i++)
+        {
+            let numarray = [1,2,3,4,5,6,7,8,9,0];
+            let dup = numarray[Math.floor(Math.random()*numarray.length)];
+            OTP += dup;
+        }  
+    }
+
+    emailjs.init("U4Njn7Y5_7iUzg-95");
+
+    function sendotp(email){
+
+
+        let templateparams = {
+            to_email: email,
+            code: OTP
+        };
+
+        emailjs.send("service_jw7pldj","template_x2wifcp",templateparams)
+        .then(Response=>{
+            emailfield.style.display = "none";
+            OTPDIV.style.display = "flex";
+            formheadingdiv.innerHTML = "Verify Email";
+            headingemaildiv.innerHTML = email;
+            submitbtn.value = "Verify & Continue";
+            terms_conditionsdiv.style.display = "none";
+            resenddiv.style.display = "block";
+            isverifying = true;
+        })
+
+        .catch(error=>{
+            console.log(error);
+        })
+    }
+
+    let email;
+
+    console.log(isverifying);
+    form.addEventListener('submit',(event)=>{
+        event.preventDefault();
+        console.log("login");
+
+        if(!isverifying){
+            email = document.getElementById("Email").value;
+
+
+            if(email === ""){
+                alert("Enter Email Address");
+            }
+            else{
+                generateotp();
+                if(OTP !== "")
+                {
+                    sendotp(email);
+                }
+                else{
+                    alert("OTP Not generated");
+                }
+            }
+        }
+
+        else if(isverifying){
+            let EnteredOTP = document.getElementById("otp1").value+ document.getElementById("otp2").value+document.getElementById("otp3").value+document.getElementById("otp4").value+document.getElementById("otp5").value+document.getElementById("otp6").value;
+            if(EnteredOTP === ""){
+                alert("Enter Valid OTP");
+            }
+            else if(EnteredOTP === OTP){
+                alert("OTP Matched");
+                userdetails.push({email: email});
+                localStorage.setItem('loggeduserdetails',JSON.stringify(userdetails));
+                
+                localStorage.setItem('currentuser',JSON.stringify(email));
+                localStorage.setItem('userloggedin', true);
+                Loginmodaldiv.style.display = "none";
+                return;
+            }     
+            else{
+                alert("OTP not Matched");
+            }
+        }
+    });
+
+    
+    userloggedin = JSON.parse(localStorage.getItem('userloggedin')) || [];
+    if(userloggedin){
+        console.log(userloggedin);
+        cartbtn.addEventListener('click',()=>{
+            window.location.href = "cart.html";
+        })
+
+        loginbtn.style.display = "none";
+        profilebtn.style.display = "block";
+        emaildisplaydiv.innerHTML = email;
+    }
+    else{
+        cartbtn.addEventListener('click',()=>{
+        if(Loginmodaldiv.style.display === "none")
+        {
+            console.log("hi");
+            Loginmodaldiv.style.display = "flex";
+        }
+        else{
+            Loginmodaldiv.style.display = "none";
+        }
+        })
+        loginbtn.style.display = "flex";
+        profilebtn.style.display = "none";
+    }
+
+    profilebtn.addEventListener('click',()=>{
+        if(logoutsection.style.display === "none"){
+            console.log("ello");
+            logoutsection.style.display = "flex";
+        }
+        else if(logoutsection.style.display === "flex"){
+            logoutsection.style.display = "none";
+        }
+    })
+
+
+    function movetonext(currentInput, nextInputId) {
+        if (currentInput.value.length === 1) {
+            if (nextInputId) {
+                document.getElementById(nextInputId).focus();
+            }
+        }
+    }
+
+    window.onload = function() {
+        let isUserLoggedIn = localStorage.getItem('userloggedin');
+        if (isUserLoggedIn) {
+            loginbtn.style.display = "none";
+            profilebtn.style.display = "block";
+        }
+    }
+</script> -->
